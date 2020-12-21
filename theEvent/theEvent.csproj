@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64104F5D-2AA4-4528-B22A-1042C43CE797}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>theEvent</RootNamespace>
+    <AssemblyName>theEvent</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\VS\Tool Library\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.111.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLog.Designer.cs">
+      <DependentUpon>AdminLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAdmin.Designer.cs">
+      <DependentUpon>DeleteAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEvent.Designer.cs">
+      <DependentUpon>DeleteEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMember.Designer.cs">
+      <DependentUpon>DeleteMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePageAdmin.Designer.cs">
+      <DependentUpon>HomePageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CheckLogModel.cs" />
+    <Compile Include="Models\MessageModel.cs" />
+    <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\EventModel.cs" />
+    <Compile Include="GlobalConf.cs" />
+    <Compile Include="DataAccess\IDataConnection.cs" />
+    <Compile Include="DataAccess\SqliteConnector.cs" />
+    <Compile Include="Models\ReviewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedBack.Designer.cs">
+      <DependentUpon>FeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAdminL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAdminL.Designer.cs">
+      <DependentUpon>SearchAdminL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAdminN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAdminN.Designer.cs">
+      <DependentUpon>SearchAdminN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEventL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEventL.Designer.cs">
+      <DependentUpon>SearchEventL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEventN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEventN.Designer.cs">
+      <DependentUpon>SearchEventN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMemberL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchMemberL.Designer.cs">
+      <DependentUpon>SearchMemberL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMemberN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchMemberN.Designer.cs">
+      <DependentUpon>SearchMemberN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMessage.Designer.cs">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMessage.Designer.cs">
+      <DependentUpon>ShowMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignupAdmin.Designer.cs">
+      <DependentUpon>SignupAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools.Designer.cs">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolsAdmin.Designer.cs">
+      <DependentUpon>ToolsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAdmin.Designer.cs">
+      <DependentUpon>UpdateAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEvent.Designer.cs">
+      <DependentUpon>UpdateEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEvent2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEvent2.Designer.cs">
+      <DependentUpon>UpdateEvent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInfo.Designer.cs">
+      <DependentUpon>UpdateInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMember.Designer.cs">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePersonInfo.Designer.cs">
+      <DependentUpon>UpdatePersonInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLog.resx">
+      <DependentUpon>AdminLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAdmin.resx">
+      <DependentUpon>DeleteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEvent.resx">
+      <DependentUpon>DeleteEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMember.resx">
+      <DependentUpon>DeleteMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePageAdmin.resx">
+      <DependentUpon>HomePageAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FeedBack.resx">
+      <DependentUpon>FeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchAdminL.resx">
+      <DependentUpon>SearchAdminL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchAdminN.resx">
+      <DependentUpon>SearchAdminN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchEventL.resx">
+      <DependentUpon>SearchEventL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchEventN.resx">
+      <DependentUpon>SearchEventN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchMemberL.resx">
+      <DependentUpon>SearchMemberL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchMemberN.resx">
+      <DependentUpon>SearchMemberN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMessage.resx">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMessage.resx">
+      <DependentUpon>ShowMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupAdmin.resx">
+      <DependentUpon>SignupAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolsAdmin.resx">
+      <DependentUpon>ToolsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAdmin.resx">
+      <DependentUpon>UpdateAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEvent.resx">
+      <DependentUpon>UpdateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEvent2.resx">
+      <DependentUpon>UpdateEvent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfo.resx">
+      <DependentUpon>UpdateInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMember.resx">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePersonInfo.resx">
+      <DependentUpon>UpdatePersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sonn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sonn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technical-support %282%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

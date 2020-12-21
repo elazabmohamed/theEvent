@@ -1,0 +1,4 @@
+Please update the following adresses in the app config folder to the proper adresses on your system
+
+    <add name="MyDatabase" connectionString="Data Source=D:\Project\theEvent\theEvent\dbs\peopledb.db" providerName="System.Data.SQLite"/>
+    <add name="MyDatabaseCity" connectionString="Data Source=D:\Project\theEvent\theEvent\dbs\citydb.db" providerName="System.Data.SQLite"/>
