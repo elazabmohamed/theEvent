@@ -191,3 +191,7 @@ D:\Github\theEvent\theEvent\obj\Debug\theEvent.csproj.CoreCompileInputs.cache
 D:\Github\theEvent\theEvent\obj\Debug\theEvent.csproj.CopyComplete
 D:\Github\theEvent\theEvent\obj\Debug\theEvent.exe
 D:\Github\theEvent\theEvent\obj\Debug\theEvent.pdb
+D:\Github\theEvent\theEvent\bin\Debug\theEvent.exe.manifest
+D:\Github\theEvent\theEvent\bin\Debug\theEvent.application
+D:\Github\theEvent\theEvent\obj\Debug\theEvent.exe.manifest
+D:\Github\theEvent\theEvent\obj\Debug\theEvent.application
