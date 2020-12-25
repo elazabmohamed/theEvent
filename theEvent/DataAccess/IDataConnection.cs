@@ -15,6 +15,7 @@ namespace theEvent.DataAccess
     /// </summary>
     public interface IDataConnection
     {
+        void CheckDatabase();
         EventModel CreateEvent(EventModel Model);
         postEvent UpdateEventFeedBack(postEvent Model, string email);
         int FillAdminCount();

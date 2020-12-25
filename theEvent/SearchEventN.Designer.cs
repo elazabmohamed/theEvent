@@ -43,11 +43,11 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Font = new System.Drawing.Font("Raleway", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.BurlyWood;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(304, 92);
+            this.label9.Size = new System.Drawing.Size(308, 91);
             this.label9.TabIndex = 74;
             this.label9.Text = "thEvent";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -69,13 +69,14 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Coldiac Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.label3.Location = new System.Drawing.Point(179, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 20);
+            this.label3.Size = new System.Drawing.Size(221, 25);
             this.label3.TabIndex = 72;
             this.label3.Text = "Search Event By Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataGridView1
             // 

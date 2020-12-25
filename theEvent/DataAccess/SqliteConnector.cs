@@ -20,6 +20,41 @@ namespace theEvent.DataAccess
         /// </summary>
         /// 
 
+        public void CheckDatabase()
+        {
+
+            using (SqlConnection c = new SqlConnection(GlobalConf.CnnString("CheckDB")))
+            {
+                var database = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"SQL", "Create_Database.sql"));
+                var CreateDB= "CREATE DATABASE THEVENT;";
+                c.Open();
+                try
+                {
+                    using (SqlCommand cmd1 = new SqlCommand(database, c))
+                    {
+                        cmd1.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception e)
+                {
+                    using (SqlCommand cmd1 = new SqlCommand(CreateDB, c))
+                    {
+                        cmd1.ExecuteNonQuery();
+                    }
+                }
+                using (SqlCommand cmd1 = new SqlCommand(database, c))
+                {
+
+                    cmd1.ExecuteNonQuery();
+                }
+
+
+            }
+        }
+
+
+
+
         public DataTable FillDataPerson(DataTable data)
         {
             using (SqlConnection c = new SqlConnection(GlobalConf.CnnString("MyDatabaseDeneme")))

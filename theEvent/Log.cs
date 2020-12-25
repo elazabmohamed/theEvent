@@ -19,6 +19,15 @@ namespace theEvent
         public Log()
         {
             InitializeComponent();
+            CheckDB();
+        }
+
+        private void CheckDB()
+        {
+            foreach (IDataConnection db in GlobalConf.Connections)
+            {
+                db.CheckDatabase();
+            }
         }
 
         private void tbPassword_TextChanged(object sender, EventArgs e)
@@ -74,6 +83,11 @@ namespace theEvent
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
